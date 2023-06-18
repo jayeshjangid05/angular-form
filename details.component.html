@@ -1,0 +1,31 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <button (click)="DownloadFile()">DownLoad</button>
+        <Ul *ngFor="let element of data">
+          <li>{{element.name}}</li>
+          <li>{{element.age}}</li>
+          <li>{{element.average}}</li>
+          <li>{{element.apprpved}}</li>
+          <li>{{element.description}}</li>
+        </Ul>
+      </div>
+    </div>
+    <div>
+      <span class="example-list-section">
+        <mat-checkbox class="example-margin"
+                      [checked]="autcomplete"
+                      [color]=""
+                      [indeterminate]="someComplete()"
+                      (change)="setAll($event.checked)">
+        </mat-checkbox>
+      </span>
+      <span *ngFor="let element of task">
+        <mat-checkbox class="example-margin"
+                     [(ngModel)]="element.completed"
+                     (ngModelChange)="updateAllComplete()">
+          {{element.name}}
+        </mat-checkbox>
+      </span>
+    </div>
+  </div>

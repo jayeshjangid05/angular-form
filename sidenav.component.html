@@ -1,0 +1,36 @@
+<mat-sidenav-container class="example-container" >
+    <mat-sidenav mode="side" opened class="sidenav">
+        <mat-nav-list  ria-label="Example icon-button with a menu" >
+            <button mat-icon-button class="togglebtn">
+                <mat-icon (click)=toggle()>menu</mat-icon>
+            </button>
+        </mat-nav-list>
+        <mat-nav-list class="list">
+            <a routerLink="/home">
+              <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+              <span *ngIf="showIcontex">Home</span>
+            </a>  
+        </mat-nav-list>
+        <mat-nav-list class="list">
+            <a routerLink="/information">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+                <span *ngIf="showIcontex">information</span>
+            </a>
+        </mat-nav-list>
+        <mat-nav-list class="list">
+            <a routerLink="/check">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+                <span *ngIf="showIcontex">Check-table</span>
+            </a>
+        </mat-nav-list>
+        <mat-nav-list class="list">
+            <a routerLink="/detail">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+                <span *ngIf="showIcontex">Detail</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content [ngClass]="{'hideMarginLeft':!showIcontex,'showMarginLeft':showIcontex}">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

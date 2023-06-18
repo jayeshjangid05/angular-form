@@ -1,0 +1,14 @@
+.form{
+    width: 500px;
+    margin: 75px auto;
+    background: blue;
+}
+h2{
+    font-size: 32px;
+    text-align: center;
+}
+.feild{
+    width: 275px !important;
+    margin: auto !important;
+    display: block !important;
+}

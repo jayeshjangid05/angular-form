@@ -1,0 +1,41 @@
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+}
+.sidenav{
+    background: #673ab7;
+    border-right: 2px solid #715e5e;
+    padding: 5px;
+}
+.list{
+    display: flex;
+}
+.list > span{
+    margin-right: 2px;
+    font-size: 20px;
+}
+a{
+    display: flex;
+    text-decoration: none;
+}
+.togglebtn{
+    background: none;
+    border: none;
+}
+.hideMarginLeft{
+    margin-left: 48px !important;
+}
+.sideMarginLeft{
+    margin-left: 118px !important;
+}
+mat-icon{
+    color: white;
+}
+span{
+    color: white;
+    font-size: 14px;
+}
